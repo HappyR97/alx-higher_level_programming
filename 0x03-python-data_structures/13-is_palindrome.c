@@ -33,3 +33,4 @@ int is_palindrome(listint_t **head)
 			return (0);
 	return (1);
 }
+
