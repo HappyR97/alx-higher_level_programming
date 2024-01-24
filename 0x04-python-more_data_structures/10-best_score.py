@@ -7,7 +7,7 @@ def best_score(a_dictionary):
     biggest = 0
     for key in a_dictionary:
         if a_dictionary[key] is None:
-            return None
+            continue
         if a_dictionary[key] > biggest:
             biggest = a_dictionary[key]
             biggest_key = key
