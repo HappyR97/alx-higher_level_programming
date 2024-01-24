@@ -6,6 +6,12 @@ def roman_to_int(roman_string):
     roman_values = {"I": 1, "V": 5, "X": 10, "L": 50,
                     "C": 100, "D": 500, "M": 1000}
     total = 0
-    for c in roman_string:
-        total += roman_values[c]
+    for i in range(len(roman_string)):
+        if roman_string[i] == "X" and roman_string[i - 1] == 'I':
+            total += 8
+            continue
+        if roman_string[i] == "V" and roman_string[i - 1] == 'I':
+            total += 3
+            continue
+        total += roman_values[roman_string[i]]
     return total

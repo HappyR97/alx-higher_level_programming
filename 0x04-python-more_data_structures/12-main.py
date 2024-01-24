@@ -23,3 +23,9 @@ print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
 roman_number = 69
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "DCLIX"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "DCLIV"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
