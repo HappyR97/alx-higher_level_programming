@@ -36,6 +36,8 @@ class Square:
         """Setter for position, with checks that
         it's a tuple of positive ints"""
         if (not isinstance(value, tuple) or
+                not isinstance(value[0], int) or
+                not isinstance(value[1], int) or
                 value[0] < 0 or
                 value[1] < 0 or
                 len(value) != 2):
@@ -50,7 +52,7 @@ class Square:
     def my_print(self):
         """Prints the square with the character #"""
         if self.__size == 0:
-            print()
+            print("")
         else:
             for i in range(self.__position[1]):
                 print()
@@ -59,4 +61,4 @@ class Square:
                     print(" ", end="")
                 for j in range(self.__size):
                     print('#', end="")
-                print()
+                print("")
