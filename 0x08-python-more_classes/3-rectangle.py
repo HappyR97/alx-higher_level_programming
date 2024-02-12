@@ -55,12 +55,11 @@ class Rectangle:
     def __str__(self):
         """string representation of class"""
         if self.__width == 0 or self.__height == 0:
-            print()
+            return ""
         else:
             class_string = ""
             for i in range(self.__height):
                 for j in range(self.__width):
                     class_string += "#"
                 class_string += "\n"
-
         return class_string[:-1]
