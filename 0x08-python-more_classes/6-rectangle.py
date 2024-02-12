@@ -8,10 +8,10 @@ This module defines a class Rectangle
 
 
 class Rectangle:
+    """class that defines a rectangle"""
 
     number_of_instances = 0
 
-    """class that defines a rectangle"""
     def __init__(self, width=0, height=0):
         """"Initialize the data"""
         self.width = width
