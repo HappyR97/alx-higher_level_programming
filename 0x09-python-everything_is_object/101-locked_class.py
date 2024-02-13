@@ -7,6 +7,6 @@ This module defines a LockedClass
 """
 
 
-class Lockedclass:
+class LockedClass:
     """ Prevents user from dynamically creating new instance attributes """
     __slots__ = ["first_name"]
