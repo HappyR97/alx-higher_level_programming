@@ -4,14 +4,14 @@ The  `7-base_geometry` module
 Using `7-base_geometry`:
 ------------------------
 
->>> base_geometry = __import__('7-base_geometry').BaseGeometry
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 >>> bg = BaseGeometry()
 >>> type(bg) == BaseGeometry
 True
 
 >>> bg.area()
-Traceback(most recent call last):
+Traceback (most recent call last):
 Exception: area() is not implemented
 
 >>> bg.integer_validator("test", 1.2)
