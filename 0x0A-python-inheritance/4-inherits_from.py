@@ -2,10 +2,7 @@
 
 """
 
-This modules defines a function that checks if
-the object is an instance of a class that inherited
-from a specified class
-
+This module defines inherits_from function
 
 """
 
