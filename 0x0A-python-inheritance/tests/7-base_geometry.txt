@@ -1,0 +1,43 @@
+The  `7-base_geometry` module
+===============================
+
+Using `7-base_geometry`:
+------------------------
+
+>>> base_geometry = __import__('7-base_geometry').BaseGeometry
+
+>>> bg = BaseGeometry()
+>>> type(bg) == BaseGeometry
+True
+
+>>> bg.area()
+Traceback(most recent call last):
+Exception: area() is not implemented
+
+>>> bg.integer_validator("test", 1.2)
+Traceback (most recent call last):
+TypeError: test must be an integer
+
+>>> bg.integer_validator("name", "string")
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> bg.integer_validator("john", True)
+Traceback (most recent call last):
+TypeError: john must be an integer
+
+>>> bg.integer_validator("doe", [0])
+Traceback (most recent call last):
+TypeError: doe must be an integer
+
+>>> bg.integer_validator("Betty", None)
+Traceback (most recent call last):
+TypeError: Betty must be an integer
+
+>>> bg.integer_validator("zero", 0)
+Traceback (most recent call last):
+ValueError: zero must be greater than 0
+
+>>> bg.integer_validator("negative", -1)
+Traceback (most recent call last):
+ValueError: negative must be greater than 0
