@@ -15,6 +15,6 @@ def append_after(filename="", search_string="", new_string=""):
         for i in range(len(lines)):
             if search_string in lines[i]:
                 lines.insert(i + 1, new_string)
-                i += 1
+            i += 1
         file.seek(0)
         file.writelines(lines)
