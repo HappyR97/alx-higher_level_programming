@@ -12,9 +12,11 @@ def append_after(filename="", search_string="", new_string=""):
     """Inserts a line to file if specific string is found"""
     with open(filename, "r+", encoding="utf-8") as file:
         lines = file.readlines()
-        for i in range(len(lines)):
+        i = 0
+        while i < len(lines):
             if search_string in lines[i]:
                 lines.insert(i + 1, new_string)
+                i += 1
             i += 1
         file.seek(0)
         file.writelines(lines)
