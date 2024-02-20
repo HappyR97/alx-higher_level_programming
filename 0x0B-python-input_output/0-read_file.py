@@ -9,6 +9,7 @@ and prints it to stdout
 
 
 def read_file(filename=""):
+    """Reads a text files and prints it to stdout"""
     with open(filename, encoding='UTF8') as file:
         text = file.read()
-        print(text)
+        print(text, end="")
