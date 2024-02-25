@@ -54,7 +54,23 @@ class Base:
         """Returns an instance with all attributes set"""
         if cls.__name__ == "Rectangle":
             dummy_instance = cls(1, 1)
-        elif cls.__name == "Square":
+        elif cls.__name__ == "Square":
             dummy_instance = cls(1)
         dummy_instance.update(**dictionary)
         return dummy_instance
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances"""
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, "r") as file:
+                list_dictionaries = cls.from_json_string(file.read())
+        except FileNotFoundError:
+            return []
+
+        list_instances = (
+                [cls.create(**dictionary)
+                    for dictionary in list_dictionaries]
+        )
+        return list_instances
