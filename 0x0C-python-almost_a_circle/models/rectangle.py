@@ -92,3 +92,15 @@ class Rectangle(Base):
         """Returns string representation"""
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
 {self.__width}/{self.__height}"
+
+    def display(self):
+        """Returns string representation, considering x and y"""
+        for i in range(self.__y):
+            print()
+        for i in range(self.__height):
+            for j in range(self.__x):
+                print(" ", end="")
+            for k in range(self.__width):
+                print("#", end="")
+            print()
+
