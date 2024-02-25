@@ -40,3 +40,11 @@ class Base:
         )
         with open(filename, "w") as file:
             json.dump(list_dicts, file)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns list of JSON string"""
+        if json_string is None or json_string == "":
+            return []
+        else:
+            return json.loads(json_string)
