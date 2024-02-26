@@ -39,7 +39,7 @@ class Base:
                 if list_objs else []
         )
         with open(filename, "w") as file:
-            json.dump(list_dicts, file)
+            file.write(cls.to_json_string(list_dicts))
 
     @staticmethod
     def from_json_string(json_string):
