@@ -7,7 +7,7 @@ let output = '';
 if (size) {
   for (let i = 0; i < size; i++) {
     for (let j = 0; j < size; j++) {
-      output += 'x';
+      output += 'X';
     }
     if (i !== size - 1) {
       output += '\n';
