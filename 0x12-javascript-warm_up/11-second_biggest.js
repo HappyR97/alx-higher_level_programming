@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const args = process.argv.splice(2);
+const args = process.argv.slice(2);
 const numbers = args.map(Number);
 
 if (isNaN(args[2]) || args.length === 1) {
