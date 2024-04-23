@@ -2,7 +2,11 @@
 
 const fs = require('fs');
 
-const contentFileA = fs.readFileSync(process.argv[2], 'utf8');
-const contentFileB = fs.readFileSync(process.argv[3], 'utf8');
+const passedArgs = process.argv;
 
-fs.writeFileSync(process.argv[4], contentFileA + contentFileB, 'utf8');
+const fileContentA = fs.readFileSync(passedArgs[2], 'utf8');
+const fileContentB = fs.readFileSync(passedArgs[3], 'utf8');
+
+const newContent = fileContentA + fileContentB;
+
+fs.writeFileSync(passedArgs[4], newContent, 'utf8');
